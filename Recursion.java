@@ -16,17 +16,16 @@ public class Recursion{
     }
    //part3: fibonacci sequence non-recursion
    public static int fibonacci1(int n) {
-        int first = 1;         
-        int second = 1;
-        for (int i = 1; i < n; i++) {
+        int a = 1;         
+        int b = 1;
+        for (int i = 0; i < n; i++) {
              if (i > 2) {
-
-                int temp = first;
-               first = second;
-                second += temp;
+               int temp = b;
+               b += a;
+               a += temp;
             }
         }
-        return second + first;
+        return a+b;
     }
    //part4: fibonacci sequence recursion
     public static int fibonacci(int n) {
