@@ -20,9 +20,9 @@ public class Recursion{
         int b = 1;
         for (int i = 0; i < n; i++) {
              if (i > 2) {
-               int temp = b;
-               b += a;
-               a += temp;
+               int temp = a;
+               a = b;
+               b += temp;
             }
         }
         return a+b;
